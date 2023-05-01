@@ -27,7 +27,7 @@ function init() {
   if (window.location.hostname == "edpuzzle.hs.vc") {
     alert("To use this, drag this button into your bookmarks bar. Then, run it when you're on an Edpuzzle assignment.");
   }
-  else if ((/https{0,1}:\/\/edpuzzle.com\/assignments\/[a-f0-9]{1,30}\/watch/).test(window.location.href)) {
+  else if ((/https{0,1}:\/\/edpuzzle.com\/assignments\/[a-f0-9]{1,30}\/watch/).test(window.location.href) || (/https{0,1}:\/\/edpuzzle.com\/media\/[a-f0-9]{1,30}\/watch/).test(window.location.href)) {
     getAssignment();
   }
   else if (window.canvasReadyState) {
